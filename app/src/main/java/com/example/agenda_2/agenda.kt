@@ -27,8 +27,8 @@ class Agenda : AppCompatActivity() {
 
         // BTONES
 
-        val btnBuscarNOTAS = findViewById<Button>(R.id.btnBuscarNOTAS)
-        val btnHistorialNOTAS = findViewById<Button>(R.id.btnHistorialNOTAS)
+        val btnMenuBuscarNOTAS = findViewById<Button>(R.id.btnMenuBuscarNOTAS)
+        val btnMenuHistorialNOTAS = findViewById<Button>(R.id.btnMenuHistorialNOTAS)
 
 
         // CLASES DE LA TABLAS EDIT
@@ -37,11 +37,10 @@ class Agenda : AppCompatActivity() {
 
         val editDescripcionNOTAS = findViewById<EditText>(R.id.editDescripcionNOTAS)
 
-
-
-
+        // BTONES GUARDAR
 
         val btnGuardarNOTAS = findViewById<Button>(R.id.btnGuardarNOTAS)
+
 
         val editBuscarNOTAS = findViewById<EditText>(R.id.editBuscarNOTAS)
         val textResultadosNOTAS = findViewById<TextView>(R.id.textResultadosNOTAS)
@@ -49,16 +48,20 @@ class Agenda : AppCompatActivity() {
 
         // Menú navegación
 
-        btnBuscarNOTAS.setOnClickListener {
+        btnMenuBuscarNOTAS.setOnClickListener {
             layoutAgregarNOTAS.visibility = View.GONE
             layoutBuscarNOTAS.visibility = View.VISIBLE
             layoutGuardadosContainerNOTAS.visibility = View.GONE
         }
-        btnHistorialNOTAS.setOnClickListener {
+        btnMenuHistorialNOTAS.setOnClickListener {
             layoutAgregarNOTAS.visibility = View.GONE
-            layoutBuscarNOTAS.visibility = View.GONE
-            layoutGuardadosContainerNOTAS.visibility = View.VISIBLE
+            layoutBuscarNOTAS.visibility = View.VISIBLE
+            layoutGuardadosContainerNOTAS.visibility = View.GONE
             mostrarGuardados()
+
+                //Log.e("Agenda", "Error al mostrar historial: ${e.message}")
+                //Toast.makeText(this, "Error al mostrar historial", Toast.LENGTH_SHORT).show()
+
         }
 
         // Guardar registro
@@ -98,7 +101,6 @@ class Agenda : AppCompatActivity() {
                 }
             }
         })
-
         // Botón Mostrar todos dentro de Buscar
         btnMostrarNOTAS.setOnClickListener {
             val todos = db.obtenerTodosNotas()
@@ -124,7 +126,6 @@ class Agenda : AppCompatActivity() {
                 orientation = LinearLayout.VERTICAL
                 setPadding(0, 0, 0, 16)
             }
-
             //Declaraciones para los listenir
 
             val editTituloNOTAS = EditText(this).apply { setText(registro.titulo) }
