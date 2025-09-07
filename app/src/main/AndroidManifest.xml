@@ -16,10 +16,10 @@
             android:exported="false"
             android:theme="@style/Theme.Agenda_2" />
         <activity
-            android:name=".Agenda"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Agenda"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

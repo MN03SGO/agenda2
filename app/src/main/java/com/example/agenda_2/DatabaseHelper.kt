@@ -59,6 +59,10 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "agenda.db", null, 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS registros")
         onCreate(db)
+
+        db.execSQL("DROP TABLE IF EXISTS NOTAS")
+        onCreate(db)
+
     }
 
     // INSERT
@@ -152,7 +156,7 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "agenda.db", null, 
     fun obtenerTodosNotas(): MutableList<Notas> {
         val lista = mutableListOf<Notas>()
         val db = readableDatabase
-        val cursor = db.rawQuery("SELECT * FROM Notas", null)
+        val cursor = db.rawQuery("SELECT * FROM NOTAS", null)
         if (cursor.moveToFirst()) {
             do {
                 lista.add(

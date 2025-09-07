@@ -15,6 +15,8 @@
         android:layout_height="wrap_content"
         android:text="Agenda de contactos"
 
+        android:textColor="@color/black"
+
         android:textSize="30sp"
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
@@ -40,6 +42,12 @@
             android:layout_height="wrap_content"
             android:hint="Nombre"
             android:textSize="17sp"
+
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+
+
             />
 <!-- CAJA DEL APELLIDO -->
         
@@ -49,6 +57,12 @@
             android:layout_height="wrap_content"
             android:hint="Apellido"
             android:textSize="17sp"
+
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+
+
             />
 <!-- CAJA DE DIRECCION -->
         <EditText
@@ -57,6 +71,11 @@
             android:layout_height="wrap_content"
             android:hint="Dirección"
             android:textSize="17sp"
+
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+
             />
 <!-- CAJA DE TELEFONO -->
         <EditText
@@ -65,6 +84,12 @@
             android:layout_height="wrap_content"
             android:hint="Teléfono"
             android:inputType="phone"
+
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+
+
             />
 <!-- CAJA DE EDAD -->
         <EditText
@@ -72,7 +97,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Edad"
-            android:inputType="number" />
+            android:inputType="number"
+
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+
+            />
 <!-- CAJA DE GENERO  -->
         <EditText
             android:id="@+id/editSexo"
@@ -80,6 +111,10 @@
             android:layout_height="wrap_content"
             android:hint="Sexo"
             android:textSize="17sp"
+
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             />
 <!-- CAJA DE DESCRIPCION   -->
 
@@ -91,6 +126,15 @@
             android:textSize="17sp"
             android:minLines="4"
             android:gravity="top|start"
+
+
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+
+
+
+
             />
     </LinearLayout>
 

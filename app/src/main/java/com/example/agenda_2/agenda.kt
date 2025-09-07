@@ -55,8 +55,8 @@ class Agenda : AppCompatActivity() {
         }
         btnMenuHistorialNOTAS.setOnClickListener {
             layoutAgregarNOTAS.visibility = View.GONE
-            layoutBuscarNOTAS.visibility = View.VISIBLE
-            layoutGuardadosContainerNOTAS.visibility = View.GONE
+            layoutBuscarNOTAS.visibility = View.GONE
+            layoutGuardadosContainerNOTAS.visibility = View.VISIBLE
             mostrarGuardados()
 
                 //Log.e("Agenda", "Error al mostrar historial: ${e.message}")
@@ -68,7 +68,6 @@ class Agenda : AppCompatActivity() {
         btnGuardarNOTAS.setOnClickListener {
             val nuevo = Notas(
                 titulo = editTituloNOTAS.text.toString(),
-
                 descripcionNotas = editDescripcionNOTAS.text.toString()
             )
             if (db.insertarNotas(nuevo)) {
@@ -92,7 +91,6 @@ class Agenda : AppCompatActivity() {
                         it.titulo.lowercase().contains(query) ||
                                 it.descripcionNotas.lowercase().contains(query)
                     }
-
                     textResultadosNOTAS.text = if (resultados.isEmpty()) ""
                     else resultados.joinToString("\n\n") { r ->
                         "ID: ${r.id}\nTitulo:   ${r.titulo}\nDescripcionNotas:  ${r.descripcionNotas}"

@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Notas"
-
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
@@ -25,7 +25,7 @@
         android:id="@+id/layoutAgregarNOTAS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:orientation="vertical"
 
         android:padding="20dp"
@@ -38,9 +38,13 @@
             android:id="@+id/editTituloNOTAS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="titulo"
-            android:minLines="2"
+            android:hint="Titulo"
+            android:minLines="3"
+
             android:textSize="17sp"
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
             />
 
         <!-- CAJA DE DESCRIPCION   -->
@@ -51,10 +55,17 @@
             android:layout_height="wrap_content"
             android:hint="Descripcion"
             android:textSize="17sp"
-            android:minLines="4"
+            android:minLines="5"
             android:gravity="top|start"
+
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+
+
             />
     </LinearLayout>
+
 
 
 
@@ -72,7 +83,12 @@
             android:id="@+id/editBuscarNOTAS"
             android:hint="Escribe para buscar..."
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+            />
 
         <!-- Botón Mostrar todos solo en Buscar -->
         <Button
@@ -82,12 +98,20 @@
             android:text="Mostrar todos"
             android:backgroundTint="#f5f4f0"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+
+
+            />
 
         <TextView
             android:id="@+id/textResultadosNOTAS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+
             android:text="Aquí aparecerán los resultados"
             android:paddingTop="8dp" />
     </LinearLayout>
@@ -100,19 +124,39 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:visibility="gone"
+
+        android:textColorHint="@color/gris"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/black"
+
         android:id="@+id/layoutGuardadosContainerNOTAS">
 
         <ScrollView
             android:id="@+id/layoutGuardadosNOTAS"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+
+            android:textColorHint="@color/gris"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/black"
+
+
+            >
 
             <LinearLayout
                 android:id="@+id/contenedorGuardadosNOTAS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"/>
+                android:orientation="vertical"
+
+
+                android:textColorHint="@color/gris"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/black"
+
+
+                />
         </ScrollView>
     </LinearLayout>
 
@@ -120,7 +164,7 @@
         android:id="@+id/btnGuardarNOTAS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="55dp"
 
 
         android:layout_marginBottom="15dp"
@@ -159,6 +203,8 @@
             android:backgroundTint="@color/black"/>
 
     </LinearLayout>
+
+
 
 
 
