@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             )
             if (db.insertar(nuevo)) {
                 Toast.makeText(this, "Guardado con éxito", Toast.LENGTH_SHORT).show()
-                limpiarCampos(editNombre, editApellido ,editDireccion, editTelefono, editEdad, editSexo, editNombre)
+                limpiarCampos(editNombre, editApellido ,editDireccion, editTelefono, editEdad, editSexo, editDescripcionContactos)
             } else {
                 Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()
             }
@@ -104,8 +104,9 @@ class MainActivity : AppCompatActivity() {
 
                     textResultados.text = if (resultados.isEmpty()) ""
                     else resultados.joinToString("\n\n") { r ->
-                        "ID: ${r.id}\nNombre: ${r.nombre}\nApellido: ${r.apellido}\nDireccion: ${r.direccion}\nTelefono: ${r.telefono}\nEdad: ${r.telefono}\nEdad:"
-                       // "ID: ${r.id}\nNombre: ${r.nombre}\nDirección: ${r.direccion}\nTel: ${r.telefono}\nEdad: ${r.edad}\nSexo: ${r.sexo}"
+                        "ID: ${r.id}\nNombre: ${r.nombre}\nApellido: ${r.apellido}\nDireccion: ${r.direccion}\nTelefono: " +
+                                "${r.telefono}\nEdad: ${r.telefono}\nEdad: ${r.edad}\nSexo: ${r.sexo}\nDescripcionContactos: ${r.descripcionContactos}"
+                        // "ID: ${r.id}\nNombre: ${r.nombre}\nDirección: ${r.direccion}\nTel: ${r.telefono}\nEdad: ${r.edad}\nSexo: ${r.sexo}"
                     }
                 }
             }
@@ -116,9 +117,10 @@ class MainActivity : AppCompatActivity() {
             val todos = db.obtenerTodos()
             textResultados.text = if (todos.isEmpty()) ""
             else todos.joinToString("\n\n") { r ->
-                "ID: ${r.id}\nNombre: ${r.nombre}\nApellido
+                "ID: ${r.id}\nNombre: ${r.nombre}\nApellido: ${r.apellido}\nDireccion: ${r.direccion}\nTelefono: " +
+                        "${r.telefono}\nEdad: ${r.telefono}\nEdad: ${r.edad}\nSexo: ${r.sexo}\nDescripcionContactos: ${r.descripcionContactos}"
 
-               // "ID: ${r.id}\nNombre: ${r.nombre}\nDirección: ${r.direccion}\nTel: ${r.telefono}\nEdad: ${r.edad}\nSexo: ${r.sexo}"
+                // "ID: ${r.id}\nNombre: ${r.nombre}\nDirección: ${r.direccion}\nTel: ${r.telefono}\nEdad: ${r.edad}\nSexo: ${r.sexo}"
             }
         }
     }
@@ -197,5 +199,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Agenda">
+
+    <!-- Contenido scrolleable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtNOTAS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Notas"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <!-- Formulario -->
+            <LinearLayout
+                android:id="@+id/layoutAgregarNOTAS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/editTituloNOTAS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Titulo"
+                    android:textSize="17sp"
+                    android:minLines="3" />
+
+                <EditText
+                    android:id="@+id/editDescripcionNOTAS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Descripcion"
+                    android:layout_marginTop="30dp"
+                    android:textSize="17sp"
+                    android:minLines="4"
+                    android:gravity="top|start" />
+            </LinearLayout>
+
+            <!-- Buscar -->
+            <LinearLayout
+                android:id="@+id/layoutBuscarNOTAS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editBuscarNOTAS"
+                    android:hint="Escribe para buscar..."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnMostrarNOTAS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mostrar todos"
+                    android:backgroundTint="#f5f4f0"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/textResultadosNOTAS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aquí aparecerán los resultados"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+
+            <!-- Guardados -->
+            <LinearLayout
+                android:id="@+id/layoutGuardadosContainerNOTAS"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <ScrollView
+                    android:id="@+id/layoutGuardadosNOTAS"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/contenedorGuardadosNOTAS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </ScrollView>
+            </LinearLayout>
+
+            <!-- Botones principales -->
+            <Button
+                android:id="@+id/btnGuardarNOTAS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/black"
+                android:text="Registrar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="1dp">
+
+                <Button
+                    android:id="@+id/btnHistorialNOTAS"
+                    android:text="Historial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/black" />
+
+                <Button
+                    android:id="@+id/btnBuscarNOTAS"
+                    android:text="Buscar"
+                    android:textSize="15sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/black" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <!-- BTM flotante -->
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/flotante_INI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginBottom="-8dp"
+        app:fab_addButtonColorNormal="@color/black"
+        app:fab_addButtonColorPressed="@color/black">
+        <!--  BOTON FLOTANTE DE NOTAS  -->
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/sub_texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_addButtonColorNormal="@color/black"
+            app:fab_icon="@drawable/notes"
+            app:fab_size="mini"
+            />
+
+        <!-- BOTON FLOTANTE DE ADD CONTAC-->
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/contacto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_addButtonColorNormal="@color/black"
+            app:fab_icon="@drawable/contact"
+            app:fab_size="mini"
+
+            />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</RelativeLayout>

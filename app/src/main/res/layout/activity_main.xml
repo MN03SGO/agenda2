@@ -10,10 +10,11 @@
 
 
     <TextView
+        android:id="@+id/txtContactos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Agenda de contactos"
-        android:textAlignment="center"
+
         android:textSize="30sp"
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
