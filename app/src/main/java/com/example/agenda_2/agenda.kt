@@ -12,6 +12,17 @@ class Agenda : AppCompatActivity() {
     private lateinit var db: DBHelper
     private lateinit var contenedorGuardadosNOTAS: LinearLayout
 
+
+
+
+
+
+
+
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_agenda)
@@ -23,6 +34,9 @@ class Agenda : AppCompatActivity() {
         val layoutAgregarNOTAS = findViewById<LinearLayout>(R.id.layoutAgregarNOTAS)
         val layoutBuscarNOTAS= findViewById<LinearLayout>(R.id.layoutBuscarNOTAS)
         val layoutGuardadosContainerNOTAS = findViewById<LinearLayout>(R.id.layoutGuardadosContainerNOTAS)
+
+        //CONEXIONES DEL BTN FLOTANTE
+
 
 
         // BTONES
@@ -168,4 +182,9 @@ class Agenda : AppCompatActivity() {
             contenedorGuardadosNOTAS.addView(layout)
         }
     }
+
+
+
+
+
 }

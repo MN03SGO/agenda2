@@ -12,10 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Agenda_2">
         <activity
-            android:name=".principal"
-            android:exported="false"
-            android:theme="@style/Theme.Agenda_2" />
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
