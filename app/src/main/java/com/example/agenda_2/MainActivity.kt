@@ -6,6 +6,9 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.getbase.floatingactionbutton.FloatingActionsMenu
+import com.getbase.floatingactionbutton.FloatingActionButton
+import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +25,17 @@ class MainActivity : AppCompatActivity() {
         val layoutAgregar = findViewById<LinearLayout>(R.id.layoutAgregar)
         val layoutBuscar = findViewById<LinearLayout>(R.id.layoutBuscar)
         val layoutGuardadosContainer = findViewById<LinearLayout>(R.id.layoutGuardadosContainer)
+
+
+
+        // CONEXION A BTNS FLOTANTES
+        val fabMenu = findViewById<FloatingActionsMenu>(R.id.flotante_INI)
+        val fabNotas = findViewById<FloatingActionButton>(R.id.sub_texto)
+        val fabContacto = findViewById<FloatingActionButton>(R.id.contacto)
+
+
+
+
 
 
         // BTONES
@@ -49,6 +63,33 @@ class MainActivity : AppCompatActivity() {
         val editBuscar = findViewById<EditText>(R.id.editBuscar)
         val textResultados = findViewById<TextView>(R.id.textResultados)
         val btnMostrarTodos = findViewById<Button>(R.id.btnMostrarTodos)
+
+
+        // CONEXION BTN
+
+        fabNotas.setOnClickListener {
+            val intent = Intent(this, Agenda::class.java)
+            startActivity(intent)
+        }
+
+        // Abrir ActivityMain (o el que corresponda) cuando presionen "Contacto"
+        fabContacto.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java) // O la activity de contactos
+            startActivity(intent)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // Menú navegación
 

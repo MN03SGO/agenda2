@@ -6,6 +6,12 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+
+
+import com.getbase.floatingactionbutton.FloatingActionsMenu
+import com.getbase.floatingactionbutton.FloatingActionButton
+
 
 class Agenda : AppCompatActivity() {
 
@@ -59,6 +65,23 @@ class Agenda : AppCompatActivity() {
         val editBuscarNOTAS = findViewById<EditText>(R.id.editBuscarNOTAS)
         val textResultadosNOTAS = findViewById<TextView>(R.id.textResultadosNOTAS)
         val btnMostrarNOTAS = findViewById<Button>(R.id.btnMostrarNOTAS)
+
+
+        //CONEXION BTN CONTACT
+
+        val fabNotas = findViewById<FloatingActionButton>(R.id.sub_texto)
+        val fabContacto = findViewById<FloatingActionButton>(R.id.contacto)
+
+        fabNotas.setOnClickListener {
+            val intent = Intent(this, Agenda::class.java)
+            startActivity(intent)
+        }
+
+        fabContacto.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
 
         // Menú navegación
 
